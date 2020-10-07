@@ -31,12 +31,14 @@
 </head>
 
 <body>
-
-    {{> header}}
+    {{#if iadmin}}
+        {{> header}}
+    {{/if}}
 
     {{{body}}}
-
-    {{> footer}}
+    {{#if iadmin}}
+        {{> footer}}
+    {{/if}} 
     <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button"
         title="Click to return on the top page" data-toggle="tooltip" data-placement="left"><i class="fas fa-arrow-up"></i></a>
 

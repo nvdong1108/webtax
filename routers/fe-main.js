@@ -7,7 +7,8 @@ router.get('/', (req, res) => {
         title: 'Trang chủ',
         active: {
             index: true
-        }
+        },
+        iadmin :true
     });
 });
 router.get('/about', (req, res) => {
@@ -15,7 +16,8 @@ router.get('/about', (req, res) => {
         title: 'Giới thiệu',
         active: {
             about: true
-        }
+        },
+        iadmin :true
     });
 });
 router.get('/cart', (req, res) => {
@@ -23,7 +25,8 @@ router.get('/cart', (req, res) => {
         title: 'Giỏ hàng',
         active: {
             shop: true
-        }
+        },
+        iadmin :true
     });
 });
 router.get('/checkout', (req, res) => {
@@ -47,7 +50,8 @@ router.get('/gallery', (req, res) => {
         title: 'Hình ảnh',
         active: {
             gallery: true
-        }
+        },
+        iadmin :true
     });
 });
 router.get('/my-account', (req, res) => {
@@ -88,6 +92,24 @@ router.get('/location', (req, res) => {
         active: {
             index: true
         }
+    });
+});
+router.get('/admin', (req, res) => {
+    res.render('pages/admin', {
+        title: 'Admin',
+        active: {
+            admin: true
+        },
+        iadmin :false
+    });
+});
+router.get('/success', (req, res) => {
+    res.render('pages/success', {
+        title: 'Success',
+        active: {
+            admin: true
+        },
+        iadmin :false
     });
 });
 
